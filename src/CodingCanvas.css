@@ -1,0 +1,306 @@
+/* CodingCanvas.css */
+
+.coding-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.coding-modal-container {
+  width: 95vw;
+  height: 92vh;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.coding-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-left h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.language-selector {
+  background-color: #3c3c3c;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+.coding-modal-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-pane-vertical {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  border-right: 1px solid #333;
+}
+
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #252526;
+  color: #ccc;
+  font-size: 13px;
+  border-bottom: 1px solid #333;
+}
+
+.toolbar-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.mic-btn, .run-btn {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.mic-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+.mic-btn.listening {
+  background-color: #d32f2f;
+}
+
+.run-btn {
+  background-color: #0e639c;
+  color: #fff;
+}
+
+.run-btn:hover {
+  background-color: #1177bb;
+}
+
+.code-textarea {
+  flex: 1.5;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  padding: 12px;
+  border: none;
+  resize: none;
+  outline: none;
+  line-height: 1.5;
+}
+
+.input-stream-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #252526;
+  border-top: 1px solid #333;
+  padding: 6px 12px;
+}
+
+.input-stream-header {
+  color: #ccc;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.stdin-textarea {
+  width: 100%;
+  height: 50px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 6px 8px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 12px;
+  resize: vertical;
+  outline: none;
+}
+
+.terminal-output-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #252526;
+  color: #ccc;
+  font-size: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.clear-terminal-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.clear-terminal-btn:hover {
+  color: #fff;
+}
+
+.terminal-body {
+  flex: 1;
+  margin: 0;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #4ec9b0;
+  background-color: #1e1e1e;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.ai-companion-pane {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  background-color: #252526;
+  border-left: 1px solid #333;
+  padding: 15px;
+}
+
+.ai-companion-pane h3 {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #fff;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.quick-actions button {
+  flex: 1;
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #444;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.quick-actions button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.chat-history {
+  flex: 1;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.chat-bubble {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  max-width: 85%;
+  line-height: 1.4;
+}
+
+.chat-bubble.user {
+  background-color: #0e639c;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.chat-bubble.ai {
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+  align-self: flex-start;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 6px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 13px;
+}
+
+.chat-input-area button {
+  background-color: #0e639c;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
